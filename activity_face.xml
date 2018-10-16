@@ -3,9 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Face"
     android:layout_column="5"
-    >
+    tools:context=".Face">
 
     <!--PASSAGEIRO-->
     <TextView
@@ -249,93 +248,94 @@
         android:textColor="@color/colorPrimary"
         android:textSize="20sp"
         android:textStyle="bold" />
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:scrollbars="vertical"
-    android:layout_column="0"
-    android:layout_columnSpan="0"
-    android:layout_row="7"
-    >
 
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true">
-
-    <!--Tabela -->
-
-    <TableLayout
-        android:id="@+id/exibirAll"
-        android:layout_width="match_parent"
-        android:shrinkColumns="*"
-        android:stretchColumns="*"
-        android:layout_row="6"
+        android:layout_row="7"
         android:layout_column="0"
-        android:layout_columnSpan="6"
-        android:scrollbars="vertical"
-        android:layout_height="match_parent">
+        android:layout_columnSpan="0"
+        android:orientation="vertical"
+        android:scrollbars="vertical">
 
-            <TableRow
-                android:id="@+id/exibir"
-                android:layout_width="match_parent"
-                android:layout_height="79dp"
-                android:layout_margin="1dp"
-                android:orientation="horizontal">
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:fillViewport="true">
 
-                <!--Coluna 0-->
-                <!--<TextView
-                android:id="@+id/idDB"
-                android:layout_width="match_parent"
+            <!--Tabela -->
+
+            <TableLayout
+                android:id="@+id/exibirAll"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/id"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                />-->
+                android:layout_row="6"
+                android:layout_columnSpan="6"
+                android:orientation="vertical"
+                android:scrollbars="vertical"
+                android:shrinkColumns="*"
+                android:stretchColumns="*">
 
-                <!--Coluna 1-->
-                <TextView
-                    android:id="@+id/pasDB"
-                    android:layout_width="175dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="@string/pas"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-
-                <!--Coluna 2-->
-                <TextView
-                    android:id="@+id/carDB"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="@string/car"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-
-                <!--Coluna 3-->
-                <TextView
-                    android:id="@+id/aceDB"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="@string/pol"
-                    android:textSize="12sp"
-                    android:textStyle="bold"
-
-                    />
-
-                <!--Coluna 4-->
-                <TextView
-                    android:id="@+id/valorDB"
+                <TableRow
+                    android:id="@+id/exibir"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="@string/pago"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-            </TableRow>
-        </TableLayout></ScrollView></LinearLayout>
+                    android:layout_height="79dp"
+                    android:layout_margin="1dp"
+                    android:orientation="horizontal">
+
+                    <!--Coluna 0-->
+                    <TextView
+                        android:id="@+id/idDB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/id"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <!--Coluna 1-->
+                    <TextView
+                        android:id="@+id/pasDB"
+                        android:layout_width="155dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="@string/pas"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <!--Coluna 2-->
+                    <TextView
+                        android:id="@+id/carDB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="@string/car"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <!--Coluna 3-->
+                    <TextView
+                        android:id="@+id/aceDB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="@string/pol"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+
+                        />
+
+                    <!--Coluna 4-->
+                    <TextView
+                        android:id="@+id/valorDB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="@string/pago"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+    </LinearLayout>
 </GridLayout>
 

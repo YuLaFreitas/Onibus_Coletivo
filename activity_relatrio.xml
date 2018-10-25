@@ -84,14 +84,34 @@
         android:textSize="15sp"
         android:textStyle="bold" />
 
+    <EditText
+        android:id="@+id/idEdit"
+
+        android:layout_width="40pt"
+        android:layout_height="wrap_content"
+
+        android:layout_alignTop="@+id/valorTex"
+
+        android:layout_alignParentStart="true"
+
+        android:layout_gravity="center_horizontal"
+
+        android:layout_marginStart="206dp"
+        android:layout_marginTop="31dp"
+
+        android:inputType="numberDecimal"
+        android:text=""
+        android:textAllCaps="true"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
     <ImageSwitcher
-        android:layout_width="110dp"
-        android:layout_height="55dp"
+        android:layout_width="108dp"
+        android:layout_height="44dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="226dp"
-        android:layout_marginTop="45dp"
-        />
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="108dp" />
 
     <Button
         android:id="@+id/guardar"
@@ -103,7 +123,7 @@
         android:layout_marginStart="5dp"
 
         android:layout_marginTop="54dp"
-        android:onClick="onClick"
+        android:onClick="onClickR"
         android:text="@string/arquivar"
         android:textAllCaps="true"
         android:textColor="@color/colorPrimary"
@@ -121,7 +141,7 @@
         android:layout_marginStart="109dp"
 
         android:layout_marginTop="54dp"
-        android:onClick="onClick"
+        android:onClick="onClickR"
         android:text="@string/del"
         android:textAllCaps="true"
         android:textColor="@color/colorPrimary"
@@ -149,14 +169,14 @@
         android:scrollbars="vertical">
 
         <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="340dp"
             android:fillViewport="true">
 
             <!--Tabela -->
 
             <TableLayout
-                android:id="@+id/exibirAll"
+                android:id="@+id/exibirTDS"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="@android:dimen/app_icon_size"
@@ -168,13 +188,23 @@
                 android:visibility="visible">
 
                 <TableRow
-                    android:id="@+id/exibir"
+                    android:id="@+id/exibirLinhas"
                     android:layout_width="match_parent"
                     android:layout_height="79dp"
                     android:layout_margin="1dp"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    >
 
                     <!--Coluna 0-->
+                    <TextView
+                        android:id="@+id/idTB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/id"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <!--Coluna 1-->
                     <TextView
                         android:id="@+id/dataTB"
                         android:layout_width="match_parent"
@@ -183,15 +213,15 @@
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
-                    <!--Coluna 1-->
+                    <!--Coluna 2-->
                     <TextView
                         android:id="@+id/valorTB"
-                        android:layout_width="155dp"
+                        android:layout_width="151dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
                         android:gravity="center_horizontal"
                         android:text="@string/valor"
-                        android:textSize="12sp"
+                        android:textSize="18sp"
                         android:textStyle="bold" />
 
 

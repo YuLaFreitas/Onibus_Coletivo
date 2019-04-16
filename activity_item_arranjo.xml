@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_column="6"
+    tools:context=".ItemArranjo">
+
+    <TextView
+        android:id="@+id/passageiroItem"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_columnSpan="5"
+        android:text="@string/pas"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        android:textColor="@color/texto"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/carroItem"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:gravity="center"
+        android:text="@string/car"
+        android:textAlignment="center"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/poltronaItem"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_row="1"
+        android:layout_column="1"
+        android:gravity="center"
+        android:text="@string/pol"
+        android:textAlignment="center"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        android:textColor="@color/listagem3"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/valorItem"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_row="1"
+        android:layout_column="2"
+        android:gravity="center"
+        android:text="@string/valor"
+        android:textAlignment="center"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+
+    <ImageButton
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/btnEdit"
+        android:src="@android:drawable/ic_menu_edit"
+        android:layout_row="0"
+        android:layout_rowSpan="2"
+        android:layout_column="5" />
+
+    <ImageButton
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/btnDelete"
+        android:src="@android:drawable/ic_delete"
+        android:layout_row="0"
+        android:layout_rowSpan="2"
+        android:layout_column="6" />
+
+</GridLayout>

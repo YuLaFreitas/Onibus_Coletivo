@@ -17,7 +17,7 @@
 
 
         android:layout_gravity="center_horizontal"
-        android:layout_marginStart="15dp"
+        android:layout_marginStart="131dp"
         android:layout_marginTop="25dp"
         android:text="@string/data"
         android:textColor="@color/texto"
@@ -25,7 +25,45 @@
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/dataEdit"
+        android:id="@+id/valorEdit"
+
+        android:layout_width="30pt"
+        android:layout_height="wrap_content"
+
+        android:layout_alignTop="@+id/valorTex"
+
+        android:layout_alignParentStart="true"
+
+        android:layout_gravity="center_horizontal"
+
+        android:layout_marginStart="206dp"
+        android:layout_marginTop="31dp"
+
+        android:inputType="numberDecimal"
+        android:text=""
+        android:textAllCaps="true"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/idText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+
+
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/id"
+        android:textColor="@color/texto"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/idEdit"
 
         android:layout_width="93dp"
         android:layout_height="wrap_content"
@@ -56,7 +94,7 @@
 
 
         android:layout_gravity="center_horizontal"
-        android:layout_marginStart="131dp"
+        android:layout_marginStart="210dp"
         android:layout_marginTop="25dp"
         android:text="@string/valor"
         android:textColor="@color/texto"
@@ -64,7 +102,7 @@
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/valorEdit"
+        android:id="@+id/dataEdit"
 
         android:layout_width="40pt"
         android:layout_height="wrap_content"
@@ -78,28 +116,7 @@
         android:layout_marginStart="110dp"
         android:layout_marginTop="31dp"
 
-        android:inputType="numberDecimal"
-        android:text=""
-        android:textAllCaps="true"
-        android:textSize="15sp"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/idEdit"
-
-        android:layout_width="40pt"
-        android:layout_height="wrap_content"
-
-        android:layout_alignTop="@+id/valorTex"
-
-        android:layout_alignParentStart="true"
-
-        android:layout_gravity="center_horizontal"
-
-        android:layout_marginStart="206dp"
-        android:layout_marginTop="31dp"
-
-        android:inputType="numberDecimal"
+        android:inputType="date"
         android:text=""
         android:textAllCaps="true"
         android:textSize="15sp"
@@ -136,7 +153,7 @@
         android:layout_height="40dp"
 
 
-        android:layout_alignTop="@+id/dataEdit"
+        android:layout_alignTop="@+id/valorEdit"
         android:layout_alignParentStart="true"
         android:layout_marginStart="109dp"
 
@@ -197,8 +214,9 @@
 
                     <!--Coluna 0-->
                     <TextView
+                        android:layout_column="0"
                         android:id="@+id/idTB"
-                        android:layout_width="match_parent"
+                        android:layout_width="20dp"
                         android:layout_height="wrap_content"
                         android:text="@string/id"
                         android:textSize="18sp"
@@ -206,8 +224,9 @@
 
                     <!--Coluna 1-->
                     <TextView
+                        android:layout_column="1"
                         android:id="@+id/dataTB"
-                        android:layout_width="match_parent"
+                        android:layout_width="20dp"
                         android:layout_height="wrap_content"
                         android:text="@string/data"
                         android:textSize="18sp"
@@ -215,8 +234,9 @@
 
                     <!--Coluna 2-->
                     <TextView
+                        android:layout_column="2"
                         android:id="@+id/valorTB"
-                        android:layout_width="151dp"
+                        android:layout_width="40dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
                         android:gravity="center_horizontal"

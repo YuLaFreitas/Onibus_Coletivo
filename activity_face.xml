@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
@@ -125,7 +126,7 @@
             android:autofillHints="@string/pol"
             android:inputType="numberDecimal"
 
-            android:maxLength="1"
+            android:maxLength="3"
 
             android:text=""
             android:textAllCaps="true"
@@ -194,11 +195,12 @@
             android:layout_column="4"
 
             android:layout_gravity="center_horizontal"
-            android:inputType="numberDecimal"
+
             android:text=""
-            android:maxLength="1"
+            android:maxLength="3"
             android:textSize="15sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:enabled="false"/>
 
         <!--Botões de controle-->
         <Button
@@ -319,13 +321,19 @@
             android:textStyle="bold"
             android:visibility="visible" />
 
-        <TableLayout
-            android:id="@+id/tbPesquisar"
+        <ScrollView
+            xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
-            android:layout_height="400dp"
+            android:layout_height="350dp"
+            android:fillViewport="true"
             android:layout_column="0"
             android:layout_columnSpan="6"
             android:layout_row="6"
+            >
+        <TableLayout
+            android:id="@+id/tbPesquisar"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
             android:shrinkColumns="*"
             android:stretchColumns="*"
             >
@@ -336,65 +344,133 @@
                 android:layout_margin="1dp"
                 >
                 <TextView
-                    android:id="@+id/TxId"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/id"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    />
-
-                <TextView
                     android:id="@+id/TxNome"
-                    android:layout_width="match_parent"
+                    android:layout_width="35dp"
                     android:layout_height="wrap_content"
                     android:text="@string/pas"
                     android:textSize="18sp"
                     android:textStyle="bold"
+                    android:gravity="center"
                     />
                 <TextView
                     android:id="@+id/car"
-                    android:layout_width="match_parent"
+                    android:layout_width="10dp"
                     android:layout_height="wrap_content"
                     android:text="@string/car"
-                    android:textSize="18sp"
+                    android:textSize="@dimen/letraTabela"
                     android:textStyle="bold"
+                    android:gravity="center"
                     />
                 <TextView
                     android:id="@+id/acento"
-                    android:layout_width="match_parent"
+                    android:layout_width="10dp"
                     android:layout_height="wrap_content"
                     android:text="@string/pol"
-                    android:textSize="18sp"
+                    android:textSize="@dimen/letraTabela"
                     android:textStyle="bold"
+                    android:gravity="center"
                     />
 
                 <TextView
                     android:id="@+id/TxValor"
-                    android:layout_width="match_parent"
+                    android:layout_width="5dp"
                     android:layout_height="wrap_content"
                     android:text="@string/valor"
-                    android:textSize="18sp"
+                    android:textSize="@dimen/letraTabela"
                     android:textStyle="bold"
+                    android:gravity="center"
                     />
 
             </TableRow>
+
         </TableLayout>
+    </ScrollView>
 
         <Button
-            android:id="@+id/relatorios"
+            android:id="@+id/menu"
             android:layout_height="50dp"
-            android:layout_row="7"
 
+            android:layout_row="7"
             android:layout_column="5"
+
+            android:onClick="onClick"
+            android:text="@string/menu"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/relat"
+            android:layout_height="50dp"
+
+            android:layout_row="7"
+            android:layout_column="5"
+
             android:onClick="onClick"
             android:text="@string/relatorio"
             android:textAllCaps="true"
             android:textColor="@color/colorPrimary"
 
             android:textSize="15sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:visibility="invisible"/>
+
+        <Button
+            android:id="@+id/dia3"
+            android:layout_height="@dimen/btnMenuAltura"
+            android:layout_width="@dimen/btnMenuLargura"
+
+            android:layout_row="7"
+            android:layout_column="0"
+
+            android:onClick="onClick"
+            android:text="@string/dia1"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:visibility="invisible"/>
+        <Button
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/dia2"
+
+            android:layout_height="@dimen/btnMenuAltura"
+            android:layout_width="@dimen/btnMenuLargura"
+
+            android:layout_row="7"
+            android:layout_column="2"
+
+            android:onClick="onClick"
+            android:text="@string/dia2"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:visibility="invisible"/>
+        <Button
+            android:id="@+id/dia1"
+
+            android:layout_height="@dimen/btnMenuAltura"
+            android:layout_width="@dimen/btnMenuLargura"
+
+            android:layout_row="7"
+            android:layout_column="4"
+
+            android:onClick="onClick"
+            android:text="@string/dia3"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:visibility="invisible"/>
+
+
     </GridLayout>
 
-</android.support.design.widget.CoordinatorLayout>
+</LinearLayout>
 

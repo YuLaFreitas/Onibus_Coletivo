@@ -75,7 +75,7 @@
         <EditText
             android:id="@+id/carEdit"
 
-            android:layout_width="80dp"
+            android:layout_width="32dp"
             android:layout_height="wrap_content"
             android:layout_row="3"
             android:layout_column="0"
@@ -118,7 +118,7 @@
         <EditText
             android:id="@+id/poltronaEdit"
 
-            android:layout_width="70dp"
+            android:layout_width="49dp"
             android:layout_height="wrap_content"
             android:layout_row="3"
             android:layout_column="2"
@@ -162,11 +162,10 @@
             android:textStyle="bold" />
 
 
-
         <EditText
             android:id="@+id/pagoEdit"
 
-            android:layout_width="40pt"
+            android:layout_width="52dp"
             android:layout_height="wrap_content"
 
             android:layout_row="3"
@@ -187,7 +186,7 @@
 
             android:id="@+id/id"
 
-            android:layout_width="52dp"
+            android:layout_width="30dp"
             android:layout_height="wrap_content"
 
             android:layout_row="0"
@@ -196,11 +195,11 @@
 
             android:layout_gravity="center_horizontal"
 
-            android:text=""
+            android:enabled="false"
             android:maxLength="3"
+            android:text=""
             android:textSize="15sp"
-            android:textStyle="bold"
-            android:enabled="false"/>
+            android:textStyle="bold" />
 
         <!--Botões de controle-->
         <Button
@@ -352,24 +351,24 @@
                     android:textStyle="bold"
                     android:gravity="center"
                     />
+
                 <TextView
                     android:id="@+id/car"
-                    android:layout_width="10dp"
+                    android:layout_width="5dp"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:text="@string/car"
                     android:textSize="@dimen/letraTabela"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    />
+                    android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/acento"
-                    android:layout_width="10dp"
+                    android:layout_width="5dp"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:text="@string/pol"
                     android:textSize="@dimen/letraTabela"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/TxValor"

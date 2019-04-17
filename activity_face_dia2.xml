@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_column="5"
+        tools:context=".Face">
+
+        <!--
+    para o congresso colocar um checkBox com as opções Se (1), Sa (2), Do (3)
+     usar letra ou numero
+     -->
+        <!--PASSAGEIRO-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_columnSpan="0"
+            android:layout_gravity="center_vertical"
+
+            android:text="@string/pas"
+
+            android:textColor="@color/texto"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/passEdit"
+
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_columnSpan="5"
+            android:layout_gravity="center_horizontal"
+
+            android:autoSizeMinTextSize="20sp"
+            android:autoSizePresetSizes="1"
+            android:autoSizeTextType="uniform"
+            android:autofillHints="@string/pas"
+
+            android:ems="80"
+            android:inputType="text"
+
+            android:text=""
+            android:textAllCaps="true"
+            android:textSize="15sp"
+            android:textStyle="bold"
+
+            tools:targetApi="o" />
+
+        <!--CARRO-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/car"
+            android:textColor="@color/texto"
+
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/carEdit"
+
+            android:layout_width="32dp"
+            android:layout_height="wrap_content"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:layout_gravity="center_horizontal"
+            android:autofillHints="@string/car"
+            android:inputType="numberDecimal"
+
+            android:maxLength="1"
+            android:text=""
+            android:textAllCaps="true"
+
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <!--ESPAÇO1-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:text="         "
+            android:textColor="@color/texto"
+
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <!--POLTRONA-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/pol"
+            android:textColor="@color/texto"
+
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/poltronaEdit"
+
+            android:layout_width="49dp"
+            android:layout_height="wrap_content"
+            android:layout_row="3"
+            android:layout_column="2"
+            android:layout_gravity="center_horizontal"
+            android:autofillHints="@string/pol"
+            android:inputType="numberDecimal"
+
+            android:maxLength="3"
+
+            android:text=""
+            android:textAllCaps="true"
+
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+
+        <!--ESPAÇO1-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_column="3"
+            android:text="  "
+            android:textColor="@color/texto"
+
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <!--PAGO-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_row="2"
+            android:layout_column="4"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/pago"
+
+            android:textColor="@color/texto"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+
+        <EditText
+            android:id="@+id/pagoEdit"
+
+            android:layout_width="52dp"
+            android:layout_height="wrap_content"
+
+            android:layout_row="3"
+            android:layout_column="4"
+
+            android:layout_gravity="center_horizontal"
+            android:autofillHints="@string/pago"
+            android:inputType="numberDecimal"
+
+            android:text=""
+            android:textAllCaps="true"
+
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <!--id-->
+        <EditText
+
+            android:id="@+id/id"
+
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+
+            android:layout_row="0"
+            android:layout_rowSpan="2"
+            android:layout_column="4"
+
+            android:layout_gravity="center_horizontal"
+
+            android:enabled="false"
+            android:maxLength="3"
+            android:text=""
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <!--Botões de controle-->
+        <Button
+            android:id="@+id/guardar"
+            android:layout_height="40dp"
+            android:layout_row="2"
+
+            android:layout_column="5"
+
+            android:onClick="onClick"
+            android:text="@string/arquivar"
+            android:textAllCaps="true"
+
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/pesquisar"
+            android:layout_height="40dp"
+            android:layout_row="3"
+
+            android:layout_column="5"
+
+            android:onClick="onClick"
+            android:text="@string/pesquisar"
+            android:textAllCaps="true"
+
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/upDate"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_row="1"
+
+            android:layout_column="5"
+            android:layout_columnSpan="2"
+            android:onClick="onClick"
+
+            android:text="@string/alterar"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/exluir"
+            android:layout_height="40dp"
+            android:layout_row="0"
+
+            android:layout_column="5"
+            android:onClick="onClick"
+            android:text="@string/del"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <!--SOMA DE Valores-->
+        <TextView
+            android:id="@+id/valorTotal"
+            android:layout_width="71dp"
+            android:layout_height="wrap_content"
+            android:layout_row="4"
+            android:layout_rowSpan="1"
+            android:layout_column="0"
+
+            android:layout_gravity="center_horizontal"
+
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/texto"
+
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <!--SOMA DE PAGANTES-->
+        <TextView
+            android:id="@+id/pagantesTotal"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_row="4"
+            android:layout_rowSpan="1"
+            android:layout_column="2"
+
+            android:layout_gravity="center_horizontal"
+
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/texto"
+
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/naoPagoTotal"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_row="4"
+            android:layout_rowSpan="1"
+            android:layout_column="4"
+
+            android:layout_gravity="center_horizontal"
+
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/texto"
+
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <ScrollView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:fillViewport="true"
+            android:layout_column="0"
+            android:layout_columnSpan="6"
+            android:layout_row="6"
+            >
+        <TableLayout
+            android:id="@+id/tbPesquisar"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:shrinkColumns="*"
+            android:stretchColumns="*"
+            >
+            <TableRow
+                android:id="@+id/lnPesquisar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                >
+                <TextView
+                    android:id="@+id/TxNome"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pas"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    />
+
+                <TextView
+                    android:id="@+id/car"
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/car"
+                    android:textSize="@dimen/letraTabela"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/acento"
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/pol"
+                    android:textSize="@dimen/letraTabela"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/TxValor"
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/valor"
+                    android:textSize="@dimen/letraTabela"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    />
+
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
+        <Button
+            android:id="@+id/menu"
+            android:layout_height="50dp"
+
+            android:layout_row="7"
+            android:layout_column="5"
+
+            android:onClick="onClick"
+            android:text="@string/menu"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/relat"
+            android:layout_height="50dp"
+
+            android:layout_row="7"
+            android:layout_column="5"
+
+            android:onClick="onClick"
+            android:text="@string/relatorio"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:visibility="invisible"/>
+
+        <Button
+            android:id="@+id/dia3"
+            android:layout_height="@dimen/btnMenuAltura"
+            android:layout_width="@dimen/btnMenuLargura"
+
+            android:layout_row="7"
+            android:layout_column="0"
+
+            android:onClick="onClick"
+            android:text="@string/dia1"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:visibility="invisible"/>
+        <Button
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/dia2"
+
+            android:layout_height="@dimen/btnMenuAltura"
+            android:layout_width="@dimen/btnMenuLargura"
+
+            android:layout_row="7"
+            android:layout_column="2"
+
+            android:onClick="onClick"
+            android:text="@string/dia2"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:visibility="invisible"/>
+        <Button
+            android:id="@+id/dia1"
+
+            android:layout_height="@dimen/btnMenuAltura"
+            android:layout_width="@dimen/btnMenuLargura"
+
+            android:layout_row="7"
+            android:layout_column="4"
+
+            android:onClick="onClick"
+            android:text="@string/dia3"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:visibility="invisible"/>
+
+
+    </GridLayout>
+
+</LinearLayout>
+
